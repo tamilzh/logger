@@ -1,0 +1,41 @@
+{
+  "name": "@tamilzh/logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000 --exit",
+    "coverage": "nyc --reporter=html --reporter=text npm run test",
+    "coverage-ci": "nyc --reporter=lcov npm run test",
+    "generate-jsdoc": "./node_modules/.bin/jsdoc lib -c ./jsdoc-conf.json -d docs -r",
+    "build-docs": "documentation build index.js -f html --github -o docs",
+    "eslint": "eslint -c .eslintrc.js index.js test/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamilzh/logger.git"
+  },
+  "author": "Tamilselvan.P",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tamilzh/logger/issues"
+  },
+  "homepage": "https://github.com/tamilzh/logger#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express-winston": "^4.1.0",
+    "winston": "^3.3.3",
+    "winston-logstash-transport": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-chai-friendly": "^0.7.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-mocha": "^9.0.0",
+    "jsdoc": "^3.6.7",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0"
+  }
+}
